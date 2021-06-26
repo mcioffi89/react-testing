@@ -18,7 +18,7 @@ function App() {
           <Route exact={true} path="/">
             <header className="App-header">
               <img src={logo} className="App-logo" alt="logo" />
-              <p>Hi</p>
+              <p>Hello!</p>
             </header>
           </Route>
         </Switch>
