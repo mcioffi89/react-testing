@@ -1,10 +1,10 @@
-import logo from './logo.svg';
-import './App.css';
-import Dettaglio from './Dettaglio';
+import logo from './logo.svg'
+import './App.css'
+import Dettaglio from './Dettaglio'
 import Lista from './Lista'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import NavigationBar from './NavigationBar';
-import { Container } from 'react-bootstrap';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import NavigationBar from './NavigationBar'
+import { Container } from 'react-bootstrap'
 
 function App() {
   return (
