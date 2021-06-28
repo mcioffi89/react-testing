@@ -12,23 +12,18 @@ import { setLoader } from './features/loader/loaderSlice';
 const { dispatch } = store
 
 axios.interceptors.request.use(
-  request => {
+  (request) => {
     dispatch(setLoader(true))
-    // console.log('in')
+    console.log('in')
     return request
-  },
-  error => {
-    Promise.reject(error);
-  });
+  }
+)
 
 axios.interceptors.response.use(
-  response => {
+  (response) => {
     dispatch(setLoader(false))
-    // console.log('out')
+    console.log('out')
     return response
-  },
-  error => {
-    Promise.reject(error)
   }
 )
 

@@ -38,9 +38,9 @@ function Lista() {
                                 </Card>
                             </Col>
                         )
-                    })
-                    }
+                    })}
                 </Row>
+
             </Container>
         </div>
     )
