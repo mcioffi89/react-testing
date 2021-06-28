@@ -4,14 +4,12 @@ import Dettaglio from './Dettaglio'
 import Lista from './Lista'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import NavigationBar from './NavigationBar'
-import { Container, Spinner } from 'react-bootstrap'
-import { useSelector } from 'react-redux'
-import { selectLoader } from './features/loader/loaderSlice'
+import { Container } from 'react-bootstrap'
 
 function App() {
 
-  const loader = useSelector(selectLoader)
-  console.log(loader)
+  /* const loader = useSelector(selectLoader)
+  console.log(loader) */
 
   return (
     <div>
@@ -39,7 +37,7 @@ function App() {
         </Router>
       </Container>
 
-      {loader ? <Spinner className="d-flex Spinner-position" animation="border" variant="primary" /> : null}
+
 
     </div >
 
