@@ -24,6 +24,12 @@
   color: white;
 }
 
+.Spinner-position{
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

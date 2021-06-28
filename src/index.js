@@ -4,10 +4,39 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Provider } from 'react-redux'
+import { store } from './store'
+import axios from 'axios';
+import { setLoader } from './features/loader/loaderSlice';
+
+const { dispatch } = store
+
+axios.interceptors.request.use(
+  request => {
+    dispatch(setLoader(true))
+    // console.log('in')
+    return request
+  },
+  error => {
+    Promise.reject(error);
+  });
+
+axios.interceptors.response.use(
+  response => {
+    dispatch(setLoader(false))
+    // console.log('out')
+    return response
+  },
+  error => {
+    Promise.reject(error)
+  }
+)
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
